@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1014957182663",
+    "project_id": "nobaddogs-24aca",
+    "storage_bucket": "nobaddogs-24aca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014957182663:android:36d8c1aa0b701e06ad38e2",
+        "android_client_info": {
+          "package_name": "com.example.nobaddogs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiT7Gt3Hw7TDYtkVtCJaMz26GPVszzCY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
