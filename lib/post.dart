@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'googlemapX.dart';
 
 void main() {
   runApp(MyApp());

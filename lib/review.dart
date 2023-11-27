@@ -28,7 +28,7 @@ class Review extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => MainPage()),
+                      MaterialPageRoute(builder: (context) => const FigmaToCodeApp()),
                     );
                   },
                   style: ButtonStyle(
