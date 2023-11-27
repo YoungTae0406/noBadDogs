@@ -1,5 +1,5 @@
 plugins {
-    id "com.android.application"
+    id( "com.android.application")
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
     id 'com.google.gms.google-services'
@@ -68,4 +68,7 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    // 플러그인의 classpath 설정
+    classpath "com.android.tools.build:gradle:7.6.3"
+}
