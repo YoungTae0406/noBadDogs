@@ -11,7 +11,9 @@ void main() async {
 }
 
 Future<void> initializeDefault() async {
-  FirebaseApp app = await Firebase.initializeApp();
+  FirebaseApp app = await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   print('Initialized default app $app');
 }
 
@@ -54,39 +56,59 @@ class _MyHomePageState extends State<MyHomePage> {
   String _message = '';
   String _readDataKey = 'Key';
   String _readDataValue = 'Value';
+  String _content = "content_here";
 
-  void setMessage(String message) {
+  // void setDBData(Map<dynamic, dynamic> data) {
+  //   setState(() {
+  //   // Initialize _content or use your own initialization logic
+  //     data.forEach((key, value) {
+  //       _content += '$key: $value\n'; // Concatenate key-value pairs to _content
+  //     });
+  //   });
+  // }
+
+  // Future<void> readData() async {
+  //   FirebaseDatabase realtime = FirebaseDatabase.instance;
+  //
+  //   DataSnapshot snapshot = await realtime.ref().child("posts/2").get();
+  //   Map<dynamic, dynamic> value = snapshot.value as Map<dynamic, dynamic>;
+  //
+  //   setDBData(value);
+  // }
+
+  void setDBData(List<Map<dynamic, dynamic>> dataList) {
     setState(() {
-      _message = message;
+      _content = ''; // Initialize _content or use your own initialization logic
+      for (var data in dataList) {
+        data.forEach((key, value) {
+          _content += '$key: $value\n'; // Concatenate key-value pairs to _content
+        });
+      }
     });
-  }
-
-  void setDBData(String key, String value) {
-    setState(() {
-      _readDataKey = key.substring(1, key.length-1);
-      _readDataValue = value.substring(1, value.length-1);
-    });
-  }
-
-  Future<void> _sendAnalyticsEvent() async {
-    await analytics.logEvent(
-      name: 'testevent_20231107',
-      parameters: <String, dynamic> {
-        'string':'hello',
-        'int':100,
-      },
-    );
-    setMessage('send analytics~~~~!');
   }
 
   Future<void> readData() async {
     FirebaseDatabase realtime = FirebaseDatabase.instance;
-    DataSnapshot snapshot = await realtime.ref().child("posts/1").get();
-    Map<dynamic, dynamic> value = snapshot.value as Map<dynamic, dynamic>;
-    print(value.keys);
-    print(value.values);
 
-    setDBData(value.keys.toString(), value.values.toString());
+    try {
+      List<String> postNumbers = ['1', '2']; // Specify the post numbers here
+      List<Map<dynamic, dynamic>> dataList = [];
+
+      for (var postNumber in postNumbers) {
+        DataSnapshot snapshot = await realtime.ref().child("posts/$postNumber").get();
+        Map<dynamic, dynamic> value = snapshot.value as Map<dynamic, dynamic>;
+
+        // Add the retrieved data to a list
+        if (value != null) {
+          dataList.add(value);
+        }
+      }
+
+      // Process the collected data list as needed
+      setDBData(dataList);
+    } catch (error) {
+      print('Failed to fetch data: $error');
+    }
   }
 
   @override
@@ -101,18 +123,14 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ElevatedButton(
-              onPressed: _sendAnalyticsEvent,
-              child: const Text('event test'),
-            ),
-
             // https://basic231107-default-rtdb.firebaseio.com/
             ElevatedButton(
               onPressed: readData,
               child: const Text('readData'),
             ),
             Text(
-              'KEY : $_readDataKey, VALUE : $_readDataValue',
+              //'KEY : $_readDataKey, VALUE : $_readDataValue',
+              '$_content',
               style: const TextStyle(fontSize: 20),
             ),
             Text(
