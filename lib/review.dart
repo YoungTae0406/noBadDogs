@@ -15,7 +15,7 @@ class Review extends StatelessWidget {
           children: [
             Center(
               child: Image.asset(
-                'Image/review.png',
+                'Images/review.png',
                 fit: BoxFit.cover,
               ),
             ),
@@ -28,7 +28,8 @@ class Review extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const FigmaToCodeApp()),
+                      MaterialPageRoute(builder: (context) => FigmaToCodeApp()),
+
                     );
                   },
                   style: ButtonStyle(
