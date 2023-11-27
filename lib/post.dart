@@ -42,7 +42,7 @@ class MyPostPage extends StatelessWidget {
             SizedBox(height: 10),
             Expanded(
               child: Image.asset(
-                'Image/postexample.png',
+                'Images/postexample.png',
                 fit: BoxFit.cover,
               ),
             ),
