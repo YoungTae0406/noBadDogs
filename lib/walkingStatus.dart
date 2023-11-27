@@ -55,7 +55,7 @@ class walktime extends StatelessWidget {
     return Column(
       children: [
         Image.asset(
-          'assert/present.png',
+          'Image/present.png',
           width: 350.0,
           height: 350.0,
         ),
@@ -160,7 +160,7 @@ class _cameraState extends State<camera> {
       child: Column(
         children: [
           Image.asset(
-            'assert/camera.png',
+            'Image/camera.png',
             width: 100,
             height: 100,
           ),
