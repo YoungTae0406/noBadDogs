@@ -54,8 +54,6 @@ class _MyHomePageState extends State<MyHomePage> {
   final FirebaseAnalytics analytics;
 
   String _message = '';
-  String _readDataKey = 'Key';
-  String _readDataValue = 'Value';
   String _content = "content_here";
 
   // void setDBData(Map<dynamic, dynamic> data) {
