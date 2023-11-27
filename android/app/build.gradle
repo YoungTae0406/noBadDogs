@@ -1,14 +1,3 @@
-buildscript {
-    repositories {
-        // 필요한 레포지터리 추가
-        mavenCentral()
-    }
-    dependencies {
-        // 플러그인의 classpath 설정
-        classpath "com.android.tools.build:gradle:7.6.3"
-    }
-}
-
 plugins {
     id( "com.android.application")
     id "kotlin-android"
@@ -73,4 +62,9 @@ android {
 
 flutter {
     source '../..'
+}
+
+dependencies {
+    // 플러그인의 classpath 설정
+    classpath "com.android.tools.build:gradle:7.6.3"
 }
