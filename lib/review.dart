@@ -15,7 +15,7 @@ class Review extends StatelessWidget {
           children: [
             Center(
               child: Image.asset(
-                'Image/review.png',
+                'Images/review.png',
                 fit: BoxFit.cover,
               ),
             ),

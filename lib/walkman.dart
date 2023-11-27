@@ -22,7 +22,7 @@ class Walkman extends StatelessWidget {
         children: [
           Center(
             child: Image.asset(
-              'Image/walkman.png',
+              'Images/walkman.png',
               fit: BoxFit.cover,
             ),
           ),

@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           children: <Widget>[
           ListTile(
           leading: CircleAvatar(
-            backgroundImage: AssetImage('Image/profilePhoto.png'),
+            backgroundImage: AssetImage('Images/profilePhoto.png'),
             ),
           title: Text('김민수'),
           subtitle: Text('강아지를 사랑하는 집사'),
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
     padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
     child:
 
-      Image.asset('Image/profilePhoto.png'),
+      Image.asset('Images/profilePhoto.png'),
           height: 200,
     ),
           SizedBox(height: 16),
