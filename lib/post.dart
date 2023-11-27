@@ -27,6 +27,7 @@ class MyPostPage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
+            Navigator.pop(context);
             // Handle back button
           },
         ),
@@ -35,37 +36,60 @@ class MyPostPage extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('산책 경로를 정해주세요', style: TextStyle(fontSize: 20)),
-            IconButton(
-              icon: Icon(Icons.map_rounded),
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => WalkPathPage()),
-                  );
-                },
+            Text('산책 경로를 정해주세요', style: TextStyle(fontSize: 24)),
+            SizedBox(height: 10),
+            Expanded(
+              child: Image.asset(
+                'Image/postexample.png',
+                fit: BoxFit.cover,
+              ),
             ),
             SizedBox(height: 16),
-            Text('산책 예상 시간', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-            Text('25분', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-            SizedBox(height: 16),
-            Text('산책 금액을 입력하세요', style: TextStyle(fontSize: 20)),
-            SizedBox(height: 8),
-            Text('12000원', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
-            SizedBox(height: 16),
-            TextFormField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: '본문 입력',
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 16.0),
+              // Column을 Center 위젯으로 감싸서 가운데 정렬
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text('산책 예상 시간', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                    Text('25분', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                    SizedBox(height: 16),
+
+                    SizedBox(height: 8),
+                    Text('산책 예상 시간', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                    Text('12000원', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                    SizedBox(height: 16),
+                    Text('본문 입력', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold), textAlign: TextAlign.center,),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: '본문 입력',
+                      ),
+                    ),
+                ],
+                ),
               ),
             ),
             SizedBox(height: 16),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Placeholder(fallbackHeight: 100, fallbackWidth: 100), // 임시 이미지 위젯
-                Placeholder(fallbackHeight: 100, fallbackWidth: 100), // 임시 이미지 위젯
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.photo),
+                    onPressed: () {
+
+                    },
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.camera_alt),
+                    onPressed: () {
+          // Handle camera button press
+                    },
+                  ),
               ],
             ),
             SizedBox(height: 16),
