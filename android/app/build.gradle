@@ -68,7 +68,4 @@ flutter {
     source '../..'
 }
 
-dependencies {
-    // 플러그인의 classpath 설정
-    classpath "com.android.tools.build:gradle:7.6.3"
-}
+dependencies {}

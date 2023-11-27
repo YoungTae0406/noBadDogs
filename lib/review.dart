@@ -28,7 +28,7 @@ class Review extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => FigmaToCodeApp()),
+                      MaterialPageRoute(builder: (context) => MainPage()),
 
                     );
                   },
