@@ -14,6 +14,7 @@ class MyLoginApp extends StatelessWidget {
       visualDensity: VisualDensity.adaptivePlatformDensity,
     ),
       home: LoginPage(),
+
     );
   }
 }
@@ -31,7 +32,7 @@ class LoginPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Image.asset(
-              'Image/loginimage.png',
+              'Images/loginimage.png',
               height: 200,
             ),
             SizedBox(height: 48),
