@@ -16,16 +16,13 @@ class MyLoginApp extends StatelessWidget {
       primarySwatch: Colors.pink,
       visualDensity: VisualDensity.adaptivePlatformDensity,
     ),
-<<<<<<< HEAD
+
       initialRoute: '/',
       routes : {
         '/': (context) => LoginPage(),
         '/main' : (context) => MainPage(),
       },
 
-=======
-      home: LoginPage(),
->>>>>>> 548eedb69aa62bdf81a15403e9fcf5381076da54
     );
   }
 }

@@ -16,7 +16,7 @@ class FigmaToCodeApp extends StatelessWidget {
       home: Scaffold(
         body: ListView(
           children: [
-            GooglePixel2Xl7(),
+            PostView(),
           ],
         ),
       ),
@@ -24,144 +24,158 @@ class FigmaToCodeApp extends StatelessWidget {
   }
 }
 
-class GooglePixel2Xl7 extends StatelessWidget {
+class PostView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 411,
-      height: 823,
-      color: Colors.white,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 44),
-          Align(
-            alignment: Alignment.topCenter,
-            child: Container(
-              width: 411,
-              height: 280,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('Images/개이미지.png'), // 그림 파일 경로
-                  fit: BoxFit.fill,
+    return SingleChildScrollView(
+      child: Container(
+        width: 411,
+        color: Colors.white,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 44),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                width: 411,
+                height: 280,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('Images/개이미지.png'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
-          ),
-          SizedBox(height: 19),
-          Container(
-            width: double.infinity, // 폭을 화면의 폭으로 확장
-            height: 50,
-            color: Colors.pink, // 핑크색으로 변경
-            child: Row(
-              children: [
-                SizedBox(width: 10),
-                Text(
-                  '멍뭉이(3세, 남)',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
+            SizedBox(height: 19),
+            Container(
+              width: double.infinity,
+              height: 50,
+              color: Colors.pink,
+              child: Row(
+                children: [
+                  SizedBox(width: 10),
+                  Text(
+                    '멍뭉이(3세, 남)',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
                   ),
-                ),
-                SizedBox(width: 100),
-                Text(
-                  '2km',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
+                  SizedBox(width: 100),
+                  Text(
+                    '2km',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
                   ),
-                ),
-                SizedBox(width: 10),
-                Text(
-                  '10,000 ₩',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
+                  SizedBox(width: 10),
+                  Text(
+                    '10,000 ₩',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
                   ),
-                ),
-                SizedBox(width: 10),
-                Text(
-                  '25분 ',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
+                  SizedBox(width: 10),
+                  Text(
+                    '25분 ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontFamily: 'Inter',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width,
+            Container(
+            width: double.infinity,
             height: 50,
             color: Colors.white60,
             child: Row(
-              children: [
-                SizedBox(width: 12),
-                Container(
-                  width: 25,
-                  height: 25,
-                  padding: EdgeInsets.only(left: 501.0),
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('Images/개이미지.png'),
-                      fit: BoxFit.fill,
-                    ),
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.centerLeft, //왼쪽 정렬
+                  child: Row(
+                    children: [
+                      SizedBox(width: 12),
+                      Container(
+                        width: 25,
+                        height: 25,
+                        padding: EdgeInsets.only(left: 501.0),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('Images/개이미지.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 12),
+                      Text(
+                        '동글이',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                SizedBox(width: 12),
-                Text(
-                  '동글이',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-                SizedBox(width: 140),
-                Container(
-                  width: 15,
-                  height: 15,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage('Images/개이미지.png'),
-                      fit: BoxFit.fill,
-                    ),
-                  ),
-                ),
-                SizedBox(width: 4),
-                Text(
-                  '방금 전',
-                  style: TextStyle(
-                    color: Colors.black.withOpacity(0.5),
-                    fontSize: 9,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-                SizedBox(width: 10),
-                Text(
-                  '유성구 봉명동  ',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
+                Align(
+                  alignment: Alignment.centerRight, //오른쪽 정렬
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 15,
+                        height: 15,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('Images/개이미지.png'),
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 4),
+                      Text(
+                        '방금 전',
+                        style: TextStyle(
+                          color: Colors.black.withOpacity(0.5),
+                          fontSize: 9,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        '유성구 봉명동  ',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w400,
+                          height: 0,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -279,7 +293,7 @@ class GooglePixel2Xl7 extends StatelessWidget {
                         height: 30,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('Images/bin.png'),
+                            image: AssetImage('Images/개이미지.png'),
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -295,12 +309,22 @@ class GooglePixel2Xl7 extends StatelessWidget {
                       child: Container(
                         width: 35,
                         height: 35,
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0x3F000000),
+                              blurRadius: 4,
+                              offset: Offset(0, 5),
+                              spreadRadius: 0,
+                            ),
+                          ],
+                        ),
                         child: Container(
                           width: 26.25,
                           height: 26.25,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('Images/pen.png'),
+                              image: AssetImage('Images/개이미지.png'),
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -312,7 +336,8 @@ class GooglePixel2Xl7 extends StatelessWidget {
               ),
             ),
           ),
-        ],
+          ],
+        ),
       ),
     );
   }

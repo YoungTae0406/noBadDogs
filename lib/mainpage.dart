@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'loginPage.dart';
+import 'postView.dart';
+
 
 class TrianglePainter extends CustomPainter {
   @override
@@ -58,7 +61,7 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          Expanded(
+          Container(
             child: Column(
               children: <Widget>[
                 Container(
@@ -145,1260 +148,326 @@ class MainPage extends StatelessWidget {
                   color: index % 2 == 0 ? Colors.grey : Colors.blue,
                   child: Column(
                     children: <Widget>[
-                      Container(
-                        width: 411,
-                        height: 178,
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: 169.50,
-                              top: 118.94,
-                              child: Container(
-                                width: 200,
-                                height: 21.47,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => PostView()), // postView를 PostView()로 수정
+                          );
+                        },
+                        child: Container(
+                          width: 411,
+                          height: 178,
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                left: 169.50,
+                                top: 118.94,
+                                child: Container(
+                                  width: 200,
+                                  height: 21.47,
+                                  child: Stack(
+                                    children: [
+                                      Positioned(
+                                        left: 0,
+                                        top: 0,
+                                        child: Container(
+                                          width: 62,
+                                          height: 21.47,
+                                          decoration: ShapeDecoration(
+                                            color: Color(0xFFD9D9D9),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(35),
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 70,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
+                                      Positioned(
+                                        left: 70,
+                                        top: 0,
+                                        child: Container(
+                                          width: 62,
+                                          height: 21.47,
+                                          decoration: ShapeDecoration(
+                                            color: Color(0xFFD9D9D9),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(35),
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 138,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
+                                      Positioned(
+                                        left: 138,
+                                        top: 0,
+                                        child: Container(
+                                          width: 62,
+                                          height: 21.47,
+                                          decoration: ShapeDecoration(
+                                            color: Color(0xFFD9D9D9),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(35),
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 10,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '소형견',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
+                                      Positioned(
+                                        left: 10,
+                                        top: 5.37,
+                                        child: SizedBox(
+                                          width: 44,
+                                          height: 12.07,
+                                          child: Text(
+                                            '소형견',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 7,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                              height: 0,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 80,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '물지않아요',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
+                                      Positioned(
+                                        left: 80,
+                                        top: 5.37,
+                                        child: SizedBox(
+                                          width: 44,
+                                          height: 12.07,
+                                          child: Text(
+                                            '물지않아요',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 7,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                              height: 0,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 148,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '물어요',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
+                                      Positioned(
+                                        left: 148,
+                                        top: 5.37,
+                                        child: SizedBox(
+                                          width: 44,
+                                          height: 12.07,
+                                          child: Text(
+                                            '물어요',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 7,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                              height: 0,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            Positioned(
-                              left: 25,
-                              top: 25,
-                              child: Container(
-                                width: 317.50,
-                                height: 134.17,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 148.50,
-                                      top: 26.81,
-                                      child: SizedBox(
-                                        width: 160,
-                                        height: 40.25,
-                                        child: Text(
-                                          '호두(7세, 여)\n',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 18,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
+                              Positioned(
+                                left: 25,
+                                top: 25,
+                                child: Container(
+                                  width: 317.50,
+                                  height: 134.17,
+                                  child: Stack(
+                                    children: [
+                                      Positioned(
+                                        left: 148.50,
+                                        top: 26.81,
+                                        child: SizedBox(
+                                          width: 160,
+                                          height: 40.25,
+                                          child: Text(
+                                            '호두(7세, 여)\n',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 18,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                              height: 0,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 151.50,
-                                      top: 57.03,
-                                      child: SizedBox(
-                                        width: 166,
-                                        height: 38.91,
-                                        child: Text(
-                                          '2km, 1만원',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 18,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
+                                      Positioned(
+                                        left: 151.50,
+                                        top: 57.03,
+                                        child: SizedBox(
+                                          width: 166,
+                                          height: 38.91,
+                                          child: Text(
+                                            '2km, 1만원',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 18,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                              height: 0,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 135.35,
-                                        height: 134.17,
-                                        decoration: ShapeDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage('Images/개이미지.png'),
-                                            fit: BoxFit.fill,
-                                          ),
-                                          shape: RoundedRectangleBorder(
-                                            side: BorderSide(width: 3),
-                                            borderRadius:
-                                            BorderRadius.circular(30),
+                                      Positioned(
+                                        left: 0,
+                                        top: 0,
+                                        child: Container(
+                                          width: 135.35,
+                                          height: 134.17,
+                                          decoration: ShapeDecoration(
+                                            image: DecorationImage(
+                                              image:
+                                              AssetImage('Images/개이미지.png'),
+                                              fit: BoxFit.fill,
+                                            ),
+                                            shape: RoundedRectangleBorder(
+                                              side: BorderSide(width: 3),
+                                              borderRadius:
+                                              BorderRadius.circular(30),
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            Positioned(
-                              left: 326.50,
-                              top: 19,
-                              child: Container(
-                                width: 60,
-                                height: 25,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지4.png"),
-                                            fit: BoxFit.fill,
+                              Positioned(
+                                left: 326.50,
+                                top: 19,
+                                child: Container(
+                                  width: 60,
+                                  height: 25,
+                                  child: Stack(
+                                    children: [
+                                      Positioned(
+                                        left: 0,
+                                        top: 0,
+                                        child: Container(
+                                          width: 25,
+                                          height: 25,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image:
+                                              AssetImage("Images/이미지4.png"),
+                                              fit: BoxFit.fill,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 30,
-                                      top: 7,
-                                      child: SizedBox(
-                                        width: 30,
-                                        height: 17.44,
-                                        child: Text(
-                                          '방금 전',
-                                          style: TextStyle(
-                                            color:
-                                            Colors.black.withOpacity(0.5),
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
+                                      Positioned(
+                                        left: 30,
+                                        top: 7,
+                                        child: SizedBox(
+                                          width: 30,
+                                          height: 17.44,
+                                          child: Text(
+                                            '방금 전',
+                                            style: TextStyle(
+                                              color:
+                                              Colors.black.withOpacity(0.5),
+                                              fontSize: 9,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                              height: 0,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            Positioned(
-                              left: 314.50,
-                              top: 148,
-                              child: Container(
-                                width: 73,
-                                height: 25,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 66,
-                                      top: 7.14,
-                                      child: SizedBox(
-                                        width: 7,
-                                        height: 17.44,
-                                        child: Text(
-                                          '2',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
+                              Positioned(
+                                left: 314.50,
+                                top: 148,
+                                child: Container(
+                                  width: 73,
+                                  height: 25,
+                                  child: Stack(
+                                    children: [
+                                      Positioned(
+                                        left: 66,
+                                        top: 7.14,
+                                        child: SizedBox(
+                                          width: 7,
+                                          height: 17.44,
+                                          child: Text(
+                                            '2',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 9,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                              height: 0,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지5.png"),
-                                            fit: BoxFit.fill,
+                                      Positioned(
+                                        left: 0,
+                                        top: 0,
+                                        child: Container(
+                                          width: 25,
+                                          height: 25,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image:
+                                              AssetImage("Images/이미지5.png"),
+                                              fit: BoxFit.fill,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 38,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지5.png"),
-                                            fit: BoxFit.fill,
+                                      Positioned(
+                                        left: 38,
+                                        top: 0,
+                                        child: Container(
+                                          width: 25,
+                                          height: 25,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                              image:
+                                              AssetImage("Images/이미지5.png"),
+                                              fit: BoxFit.fill,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      left: 28,
-                                      top: 7,
-                                      child: SizedBox(
-                                        width: 7,
-                                        height: 17.44,
-                                        child: Text(
-                                          '1',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
+                                      Positioned(
+                                        left: 28,
+                                        top: 7,
+                                        child: SizedBox(
+                                          width: 7,
+                                          height: 17.44,
+                                          child: Text(
+                                            '1',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 9,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                              height: 0,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: 411,
-                        height: 178,
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: 169.50,
-                              top: 118.94,
-                              child: Container(
-                                width: 200,
-                                height: 21.47,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 70,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 138,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 10,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '소형견',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 80,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '물지않아요',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 148,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '물어요',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 25,
-                              top: 25,
-                              child: Container(
-                                width: 317.50,
-                                height: 134.17,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 148.50,
-                                      top: 26.81,
-                                      child: SizedBox(
-                                        width: 160,
-                                        height: 40.25,
-                                        child: Text(
-                                          '호두(7세, 여)\n',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 18,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 151.50,
-                                      top: 57.03,
-                                      child: SizedBox(
-                                        width: 166,
-                                        height: 38.91,
-                                        child: Text(
-                                          '2km, 1만원',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 18,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 135.35,
-                                        height: 134.17,
-                                        decoration: ShapeDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage('Images/개이미지.png'),
-                                            fit: BoxFit.fill,
-                                          ),
-                                          shape: RoundedRectangleBorder(
-                                            side: BorderSide(width: 3),
-                                            borderRadius:
-                                            BorderRadius.circular(30),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 326.50,
-                              top: 19,
-                              child: Container(
-                                width: 60,
-                                height: 25,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지4.png"),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 30,
-                                      top: 7,
-                                      child: SizedBox(
-                                        width: 30,
-                                        height: 17.44,
-                                        child: Text(
-                                          '방금 전',
-                                          style: TextStyle(
-                                            color:
-                                            Colors.black.withOpacity(0.5),
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 314.50,
-                              top: 148,
-                              child: Container(
-                                width: 73,
-                                height: 25,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 66,
-                                      top: 7.14,
-                                      child: SizedBox(
-                                        width: 7,
-                                        height: 17.44,
-                                        child: Text(
-                                          '2',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지5.png"),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 38,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지5.png"),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 28,
-                                      top: 7,
-                                      child: SizedBox(
-                                        width: 7,
-                                        height: 17.44,
-                                        child: Text(
-                                          '1',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: 411,
-                        height: 178,
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: 169.50,
-                              top: 118.94,
-                              child: Container(
-                                width: 200,
-                                height: 21.47,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 70,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 138,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 10,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '소형견',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 80,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '물지않아요',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 148,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '물어요',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 25,
-                              top: 25,
-                              child: Container(
-                                width: 317.50,
-                                height: 134.17,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 148.50,
-                                      top: 26.81,
-                                      child: SizedBox(
-                                        width: 160,
-                                        height: 40.25,
-                                        child: Text(
-                                          '호두(7세, 여)\n',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 18,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 151.50,
-                                      top: 57.03,
-                                      child: SizedBox(
-                                        width: 166,
-                                        height: 38.91,
-                                        child: Text(
-                                          '2km, 1만원',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 18,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 135.35,
-                                        height: 134.17,
-                                        decoration: ShapeDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage('Images/개이미지.png'),
-                                            fit: BoxFit.fill,
-                                          ),
-                                          shape: RoundedRectangleBorder(
-                                            side: BorderSide(width: 3),
-                                            borderRadius:
-                                            BorderRadius.circular(30),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 326.50,
-                              top: 19,
-                              child: Container(
-                                width: 60,
-                                height: 25,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지4.png"),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 30,
-                                      top: 7,
-                                      child: SizedBox(
-                                        width: 30,
-                                        height: 17.44,
-                                        child: Text(
-                                          '방금 전',
-                                          style: TextStyle(
-                                            color:
-                                            Colors.black.withOpacity(0.5),
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 314.50,
-                              top: 148,
-                              child: Container(
-                                width: 73,
-                                height: 25,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 66,
-                                      top: 7.14,
-                                      child: SizedBox(
-                                        width: 7,
-                                        height: 17.44,
-                                        child: Text(
-                                          '2',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지5.png"),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 38,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지5.png"),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 28,
-                                      top: 7,
-                                      child: SizedBox(
-                                        width: 7,
-                                        height: 17.44,
-                                        child: Text(
-                                          '1',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        width: 411,
-                        height: 178,
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              left: 169.50,
-                              top: 118.94,
-                              child: Container(
-                                width: 200,
-                                height: 21.47,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 70,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 138,
-                                      top: 0,
-                                      child: Container(
-                                        width: 62,
-                                        height: 21.47,
-                                        decoration: ShapeDecoration(
-                                          color: Color(0xFFD9D9D9),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                            BorderRadius.circular(35),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 10,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '소형견',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 80,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '물지않아요',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 148,
-                                      top: 5.37,
-                                      child: SizedBox(
-                                        width: 44,
-                                        height: 12.07,
-                                        child: Text(
-                                          '물어요',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 7,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 25,
-                              top: 25,
-                              child: Container(
-                                width: 317.50,
-                                height: 134.17,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 148.50,
-                                      top: 26.81,
-                                      child: SizedBox(
-                                        width: 160,
-                                        height: 40.25,
-                                        child: Text(
-                                          '호두(7세, 여)\n',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 18,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 151.50,
-                                      top: 57.03,
-                                      child: SizedBox(
-                                        width: 166,
-                                        height: 38.91,
-                                        child: Text(
-                                          '2km, 1만원',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 18,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 135.35,
-                                        height: 134.17,
-                                        decoration: ShapeDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage('Images/개이미지.png'),
-                                            fit: BoxFit.fill,
-                                          ),
-                                          shape: RoundedRectangleBorder(
-                                            side: BorderSide(width: 3),
-                                            borderRadius:
-                                            BorderRadius.circular(30),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 326.50,
-                              top: 19,
-                              child: Container(
-                                width: 60,
-                                height: 25,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지4.png"),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 30,
-                                      top: 7,
-                                      child: SizedBox(
-                                        width: 30,
-                                        height: 17.44,
-                                        child: Text(
-                                          '방금 전',
-                                          style: TextStyle(
-                                            color:
-                                            Colors.black.withOpacity(0.5),
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 314.50,
-                              top: 148,
-                              child: Container(
-                                width: 73,
-                                height: 25,
-                                child: Stack(
-                                  children: [
-                                    Positioned(
-                                      left: 66,
-                                      top: 7.14,
-                                      child: SizedBox(
-                                        width: 7,
-                                        height: 17.44,
-                                        child: Text(
-                                          '2',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 0,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지5.png"),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 38,
-                                      top: 0,
-                                      child: Container(
-                                        width: 25,
-                                        height: 25,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image:
-                                            AssetImage("Images/이미지5.png"),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Positioned(
-                                      left: 28,
-                                      top: 7,
-                                      child: SizedBox(
-                                        width: 7,
-                                        height: 17.44,
-                                        child: Text(
-                                          '1',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 9,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
-                                            height: 0,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ],
