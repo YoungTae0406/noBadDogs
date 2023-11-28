@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
 import 'package:camera/camera.dart';
+import 'review.dart';
 
 void main() {
-  runApp(MyMap());
+  runApp(MyWalkingStatus());
 }
 
-class MyMap extends StatelessWidget {
+class MyWalkingStatus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

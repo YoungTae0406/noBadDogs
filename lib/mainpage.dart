@@ -476,7 +476,27 @@ class MainPage extends StatelessWidget {
               },
             ),
           ),
+
         ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_filled),
+              label: 'Home',
+              backgroundColor: Colors.pink,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.chat),
+              label: 'Chat',
+              backgroundColor: Colors.pink,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle),
+              label: 'Profile',
+              backgroundColor: Colors.pink,
+            ),
+          ]
       ),
     );
   }

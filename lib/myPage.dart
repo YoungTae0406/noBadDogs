@@ -143,7 +143,6 @@ class MyPage extends StatelessWidget {
                 backgroundColor: Colors.pink,
               ),
             ]
-
         ),
       );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'mainpage.dart';
+import 'signUpPage.dart';
 
-import 'mainpage.dart';
 
 void main() {
   runApp(MyLoginApp());
@@ -21,6 +21,7 @@ class MyLoginApp extends StatelessWidget {
       routes : {
         '/': (context) => LoginPage(),
         '/main' : (context) => MainPage(),
+        '/signuppage' : (context) => SignUpPage(),
       },
 
     );
@@ -61,6 +62,15 @@ class LoginPage extends StatelessWidget {
             ),
             SizedBox(height: 24),
             ElevatedButton(
+              child: Text('회원가입'),
+                onPressed: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignUpPage()),
+                    );
+              }
+            ),
+            ElevatedButton(
               child: Text('로그인'),
               onPressed: () {
                 //if(){
@@ -68,9 +78,7 @@ class LoginPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(builder: (context) => MainPage()),
                 );
-                //}
-                // 로그인 로직 구현해야됨
-              },
+              }
             ),
           ],
         ),

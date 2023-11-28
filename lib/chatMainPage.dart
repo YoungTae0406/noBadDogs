@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'chatingPage.dart';
 
+void main() {
+  runApp(UI3_demo());
+}
+
 class UI3_demo extends StatefulWidget {
   @override
   UI3_demo_screen createState() => UI3_demo_screen();
@@ -45,6 +49,25 @@ class UI3_demo_screen extends State<UI3_demo> {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_filled),
+              label: 'Home',
+              backgroundColor: Colors.pink,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.chat),
+              label: 'Chat',
+              backgroundColor: Colors.pink,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle),
+              label: 'Profile',
+              backgroundColor: Colors.pink,
+            ),
+          ]
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'review.dart';
+import 'walkingStatus.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,7 +22,7 @@ class Walkman extends StatelessWidget {
       body: Stack(
         children: [
           Center(
-            child: Image.asset(
+            child: Image.asset( // 산책배정자
               'Images/walkman.png',
               fit: BoxFit.cover,
             ),
@@ -35,7 +36,7 @@ class Walkman extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Review()),
+                    MaterialPageRoute(builder: (context) => MyWalkingStatus()),
                   );
                 },
                 style: ButtonStyle(
