@@ -72,7 +72,7 @@ class googlemaps extends StatefulWidget {
 
 class _googlemapsState extends State<googlemaps> {
   late Completer<GoogleMapController> _controller;
-  static const LatLng _center = const LatLng(37.422, -122.084);
+  static const LatLng _center = const LatLng(36.37003, 127.34594);
 
   @override
   void initState() {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'mainpage.dart';
+
 void main() {
   runApp(MyLoginApp());
 }
@@ -14,7 +16,6 @@ class MyLoginApp extends StatelessWidget {
       visualDensity: VisualDensity.adaptivePlatformDensity,
     ),
       home: LoginPage(),
-
     );
   }
 }
@@ -52,10 +53,15 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 24),
-
             ElevatedButton(
               child: Text('로그인'),
               onPressed: () {
+                //if(){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MainPage()),
+                );
+                //}
                 // 로그인 로직 구현해야됨
               },
             ),
