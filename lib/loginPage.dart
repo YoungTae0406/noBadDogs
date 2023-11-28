@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'mainpage.dart';
 
 void main() {
   runApp(MyLoginApp());
@@ -13,7 +14,11 @@ class MyLoginApp extends StatelessWidget {
       primarySwatch: Colors.pink,
       visualDensity: VisualDensity.adaptivePlatformDensity,
     ),
-      home: LoginPage(),
+      initialRoute: '/',
+      routes : {
+        '/': (context) => LoginPage(),
+        '/main' : (context) => MainPage(),
+      },
 
     );
   }
@@ -56,6 +61,7 @@ class LoginPage extends StatelessWidget {
             ElevatedButton(
               child: Text('로그인'),
               onPressed: () {
+                Navigator.pushNamed(context, '/main');
                 // 로그인 로직 구현해야됨
               },
             ),

@@ -33,6 +33,7 @@ class SignUpPage extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           children: <Widget>[
             Text(
+
               '아이디를 작성해주세요',
               style: TextStyle(
                 fontSize: 15.0,

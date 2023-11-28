@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'loginPage.dart';
 
 class TrianglePainter extends CustomPainter {
   @override
@@ -30,10 +31,10 @@ class Triangle extends StatelessWidget {
 }
 
 void main() {
-  runApp(MyApp());
+  runApp(MyMainApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyMainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,7 +42,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainPage(),
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => MainPage(),
+
+      },
+
     );
   }
 }
@@ -59,7 +65,7 @@ class MainPage extends StatelessWidget {
                   //padding: EdgeInsets.symmetric(vertical: 5.0),
                   child: Column(
                     children: <Widget>[
-                      Image.asset('Images/main.png'), // 메인이미지
+                      Image.asset('Images/main.jpg'), // 메인이미지
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
