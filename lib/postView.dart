@@ -279,7 +279,7 @@ class GooglePixel2Xl7 extends StatelessWidget {
                         height: 30,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('Images/개이미지.png'),
+                            image: AssetImage('Images/bin.png'),
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -295,22 +295,12 @@ class GooglePixel2Xl7 extends StatelessWidget {
                       child: Container(
                         width: 35,
                         height: 35,
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color(0x3F000000),
-                              blurRadius: 4,
-                              offset: Offset(0, 5),
-                              spreadRadius: 0,
-                            ),
-                          ],
-                        ),
                         child: Container(
                           width: 26.25,
                           height: 26.25,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('Images/개이미지.png'),
+                              image: AssetImage('Images/pen.png'),
                               fit: BoxFit.fill,
                             ),
                           ),

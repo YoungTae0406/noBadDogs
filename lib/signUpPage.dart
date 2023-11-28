@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nobaddogs/loginPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -104,8 +105,12 @@ class SignUpPage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-
                 if (_formKey.currentState!.validate()) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+
+                  );
                   // 입력된 데이터가 유효한지 아닌지 확인
                 }
               },
