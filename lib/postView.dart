@@ -293,7 +293,7 @@ class PostView extends StatelessWidget {
                         height: 30,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('Images/개이미지.png'),
+                            image: AssetImage('Images/bin.png'),
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -324,7 +324,7 @@ class PostView extends StatelessWidget {
                           height: 26.25,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage('Images/개이미지.png'),
+                              image: AssetImage('Images/pen.png'),
                               fit: BoxFit.fill,
                             ),
                           ),

@@ -1,5 +1,8 @@
-
 import 'package:flutter/material.dart';
+
+void main() {
+  runApp(Chating());
+}
 
 class Chating extends StatefulWidget {
   @override
@@ -11,7 +14,7 @@ class _ChatingScreenState extends State<Chating> {
   final List<ChatMessage> _messages = <ChatMessage>[
     ChatMessage(
       text:
-      '강아지 산책 시키려고 방금 집에서 나왔는데 어디로 가\n면 될까요? 저는 봉명동 근처에 살아서 그냥 바로 나와\n도 될 것 같아요 ㅎㅎㅎ',
+      '강아지 산책 시키려고 방금 집에서\n나왔는데 어디로 가면 될까요? 저는\n봉명동 근처에 살아서 그냥 바로 나\n와도 될 것 같아요 ㅎㅎㅎ',
       isMyMessage: false,
       backgroundColor: const Color.fromARGB(255, 226, 225, 255), // 보라색 배경
     ),
@@ -36,7 +39,7 @@ class _ChatingScreenState extends State<Chating> {
       backgroundColor: const Color.fromARGB(255, 226, 225, 255), // 보라색 배경
     ),
     ChatMessage(
-      text: '저희 강아지가 조금 낯을 가리는데 괜찮을까요?',
+      text: '저희 강아지가 조금 낯을 가리는데 괜찮\n을까요?',
       isMyMessage: true,
       backgroundColor: const Color.fromARGB(255, 255, 243, 179), // 오렌지색 배경
     ),
@@ -145,8 +148,7 @@ class ChatMessage extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(right: 16.0),
               child: CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Text('김민수'),
+                backgroundImage: NetworkImage('https://placekitten.com/200/300'),
               ),
             ),
           Expanded(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'loginLogic.dart'; // LoginLogic 클래스를 사용하기 위해 import 합니다.
+import 'loginLogic.dart';
+import 'mainpage.dart';
+import 'signUpPage.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized(); // 이 줄이 필요한 경우에만 추가합니다.
@@ -20,7 +22,12 @@ class MyLoginApp extends StatelessWidget {
         primarySwatch: Colors.pink,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginPage(),
+      initialRoute: '/',
+      routes : {
+        '/': (context) => LoginPage(),
+        '/main' : (context) => MainPage(),
+        '/signuppage' : (context) => SignUpPage(),
+      },
     );
   }
 }
@@ -73,6 +80,10 @@ class LoginPage extends StatelessWidget {
                 try {
                   final user = await loginLogic.signIn(email, password);
                   print('User logged in: ${user?.user?.email ?? 'No email'}');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MainPage()),
+                  );
                   // 성공시 -> 메인페이지로 이동
                 } catch (e) {
                   print(e.toString());
@@ -80,6 +91,16 @@ class LoginPage extends StatelessWidget {
                 }
               },
             ),
+            ElevatedButton(
+                child: Text('회원가입'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpPage()),
+                  );
+                }
+            ),
+
           ],
         ),
       ),

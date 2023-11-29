@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
-import 'post.dart';
+import 'review.dart';
 
 void main() {
-  runApp(MyMap());
+  runApp(MyWStatus());
 }
 
-class MyMap extends StatelessWidget {
+class MyWStatus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -55,7 +55,7 @@ class walktime extends StatelessWidget {
     return Column(
       children: [
         Image.asset(
-          'Image/present.png',
+          'Images/present.png',
           width: 350.0,
           height: 350.0,
         ),
@@ -126,17 +126,23 @@ class Camera extends StatelessWidget {
         // Navigate to another Dart file when the image is clicked
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => MyApp()),
+          MaterialPageRoute(builder: (context) => Review()),
         );
       },
       child: Column(
         children: [
-          Image.asset(
-            'Image/camera.png',
-            width: 100.0,
-            height: 100.0,
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Review()),
+              );
+            },
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.pink),
+            ),
+            child: Text('확인'),
           ),
-          // Other widgets can be added here.
         ],
       ),
     );

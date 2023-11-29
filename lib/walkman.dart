@@ -36,7 +36,7 @@ class Walkman extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MyWalkingStatus()),
+                    MaterialPageRoute(builder: (context) => MyWStatus()),
                   );
                 },
                 style: ButtonStyle(

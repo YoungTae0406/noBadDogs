@@ -485,11 +485,13 @@ class MainPage extends StatelessWidget {
               icon: Icon(Icons.home_filled),
               label: 'Home',
               backgroundColor: Colors.pink,
+
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.chat),
               label: 'Chat',
               backgroundColor: Colors.pink,
+
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.account_circle),
