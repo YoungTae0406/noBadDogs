@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
-import 'package:camera/camera.dart';
-import 'review.dart';
+import 'post.dart';
 
 void main() {
-  runApp(MyWalkingStatus());
+  runApp(MyMap());
 }
 
-class MyWalkingStatus extends StatelessWidget {
+class MyMap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -42,7 +41,7 @@ class MyWalkingStatus extends StatelessWidget {
           children: [
             walktime(),
             googlemaps(),
-            camera(),
+            Camera(),
           ],
         ),
       ),
@@ -56,7 +55,7 @@ class walktime extends StatelessWidget {
     return Column(
       children: [
         Image.asset(
-          'Images/present.png',
+          'Image/present.png',
           width: 350.0,
           height: 350.0,
         ),
@@ -73,7 +72,7 @@ class googlemaps extends StatefulWidget {
 
 class _googlemapsState extends State<googlemaps> {
   late Completer<GoogleMapController> _controller;
-  static const LatLng _center = const LatLng(36.37003, 127.34594);
+  static const LatLng _center = const LatLng(37.422, -122.084);
 
   @override
   void initState() {
@@ -119,107 +118,31 @@ class _googlemapsState extends State<googlemaps> {
   }
 }
 
-class camera extends StatefulWidget {
-  @override
-  _cameraState createState() => _cameraState();
-}
-
-class _cameraState extends State<camera> {
-  late CameraController _controller;
-  late Future<void> _initializeControllerFuture;
-
-  @override
-  void initState() {
-    super.initState();
-    availableCameras().then((cameras) {
-      final firstCamera = cameras.first;
-      _controller = CameraController(
-        firstCamera,
-        ResolutionPreset.medium,
-      );
-      _initializeControllerFuture = _controller.initialize();
-    });
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
+class Camera extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        // Navigate to another Dart file when the image is clicked
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) => CameraScreen(controller: _controller),
-          ),
+          MaterialPageRoute(builder: (context) => MyApp()),
         );
       },
       child: Column(
         children: [
           Image.asset(
-            'Images/camera.png',
-            width: 100,
-            height: 100,
+            'Image/camera.png',
+            width: 100.0,
+            height: 100.0,
           ),
-          // 다른 위젯들을 추가할 수 있습니다.
+          // Other widgets can be added here.
         ],
       ),
     );
   }
 }
 
-class CameraScreen extends StatefulWidget {
-  final CameraController controller;
-
-  const CameraScreen({required this.controller});
-
-  @override
-  _CameraScreenState createState() => _CameraScreenState();
-}
-
-class _CameraScreenState extends State<CameraScreen> {
-  @override
-  void initState() {
-    super.initState();
-    widget.controller.initialize().then((_) {
-      if (!mounted) {
-        return;
-      }
-      setState(() {});
-    });
-  }
-
-  @override
-  void dispose() {
-    widget.controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    if (!widget.controller.value.isInitialized) {
-      return Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
-    }
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('카메라 모드'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context); // 이전 화면으로 돌아가기
-          },
-        ),
-      ),
-      body: CameraPreview(widget.controller),
-    );
-  }
-}
 
 
 
