@@ -30,14 +30,10 @@ class UI3_demo_screen extends State<UI3_demo> {
                     Divider(),
                     PostCard1(),
                     PostCard(),
-                    PostCard(),
-                    PostCard(),
-                    PostCard(),
-                    PostCard(),
-                    PostCard(),
-                    PostCard(),
-                    PostCard(),
-                    PostCard(),
+                    PostCard2(),
+                    PostCard2(),
+                    PostCard1(),
+                    PostCard1(),
                     // Add more PostCard widgets
                   ],
                 ),
@@ -78,7 +74,7 @@ class PostCard extends StatelessWidget {
                 SizedBox(width: 20,),
                 CircleAvatar(
                   radius: 40,
-                  backgroundImage: NetworkImage('https://placekitten.com/300/100'),
+                    backgroundImage: AssetImage('Images/maindog4.png'),
                 ),
                 SizedBox(width: 20),
                 Column(
@@ -95,6 +91,67 @@ class PostCard extends StatelessWidget {
                       children: [
                         Text(
                           '산책 잘 해주셔서 감사합니다 ㅎㅎ',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 30),
+                        Text('', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height: 25),
+            Divider(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+class PostCard2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Chating())
+        );
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(vertical: 10),
+        padding: EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(width: 20,),
+                CircleAvatar(
+                  radius: 40,
+                  backgroundImage: AssetImage('Images/maindog3.png'),
+                ),
+                SizedBox(width: 20),
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text('김수지', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                        SizedBox(width: 40),
+                        Text('방금'),
+                        SizedBox(width: 130),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          '감사합니다~~',
                           style: TextStyle(fontSize: 18),
                         ),
                       ],
@@ -139,7 +196,7 @@ class PostCard1 extends StatelessWidget {
                 SizedBox(width: 20,),
                 CircleAvatar(
                   radius: 40,
-                  backgroundImage: NetworkImage('https://placekitten.com/200/300'),
+                  backgroundImage: AssetImage('Images/maindog1.png'),
                 ),
                 SizedBox(width: 20),
                 Column(

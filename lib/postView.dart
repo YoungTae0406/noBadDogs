@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'post.dart';
 
 void main() {
   runApp(const FigmaToCodeApp());
@@ -10,9 +11,6 @@ class FigmaToCodeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-      ),
       home: Scaffold(
         body: ListView(
           children: [
@@ -42,7 +40,7 @@ class PostView extends StatelessWidget {
                 height: 280,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('Images/개이미지.png'),
+                    image: AssetImage('Images/maindog1.png'),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -57,7 +55,7 @@ class PostView extends StatelessWidget {
                 children: [
                   SizedBox(width: 10),
                   Text(
-                    '멍뭉이(3세, 남)',
+                    '비나(3세, 남)',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
@@ -120,14 +118,14 @@ class PostView extends StatelessWidget {
                         padding: EdgeInsets.only(left: 501.0),
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('Images/개이미지.png'),
+                            image: AssetImage('Images/maindog1.png'),
                             fit: BoxFit.fill,
                           ),
                         ),
                       ),
                       SizedBox(width: 12),
                       Text(
-                        '동글이',
+                        '비나주인',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 18,
@@ -148,7 +146,7 @@ class PostView extends StatelessWidget {
                         height: 15,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('Images/개이미지.png'),
+                            image: AssetImage('Images/mainclock.png'),
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -197,7 +195,7 @@ class PostView extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      '대형견',
+                      '소형견',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.black,
@@ -303,12 +301,16 @@ class PostView extends StatelessWidget {
                   Positioned(
                     left: 0,
                     top: 0,
-                    child: Container(
-                      width: 50,
-                      height: 50,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MyPostPage()),
+                        );
+                      },
                       child: Container(
-                        width: 35,
-                        height: 35,
+                        width: 50,
+                        height: 50,
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(

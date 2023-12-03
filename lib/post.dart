@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'mainpage.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +11,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'post',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
 
@@ -46,7 +46,7 @@ class MyPostPage extends StatelessWidget {
             SizedBox(height: 10),
             Expanded(
               child: Image.asset(
-                'Image/postexample.png',
+                'Images/postexample.png',
                 fit: BoxFit.cover,
               ),
             ),
@@ -100,7 +100,10 @@ class MyPostPage extends StatelessWidget {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  // 등록핸들
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MainPage()),
+                  );
                 },
                 child: Text('등록'),
               ),

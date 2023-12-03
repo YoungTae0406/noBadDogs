@@ -3,6 +3,8 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
 import 'review.dart';
 
+// 산책중 페이지가 보이는 곳
+
 void main() {
   runApp(MyWStatus());
 }
@@ -40,7 +42,9 @@ class MyWStatus extends StatelessWidget {
         body: ListView(
           children: [
             walktime(),
-            googlemaps(),
+
+            temp(),
+
             Camera(),
           ],
         ),
@@ -56,14 +60,32 @@ class walktime extends StatelessWidget {
       children: [
         Image.asset(
           'Images/present.png',
-          width: 350.0,
-          height: 350.0,
+          width: 300.0,
+          height: 200.0,
         ),
         // 다른 위젯들을 추가할 수 있습니다.
       ],
     );
   }
 }
+
+class temp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Image.asset(
+          'Images/postgoogle.png',
+          width: 300.0,
+          height: 250.0,
+        ),
+        // 다른 위젯들을 추가할 수 있습니다.
+      ],
+    );
+  }
+}
+
+
 
 class googlemaps extends StatefulWidget {
   @override

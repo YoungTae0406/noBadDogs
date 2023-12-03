@@ -13,23 +13,22 @@ class Review extends StatelessWidget {
         appBar: null,
         body: Stack(
           children: [
-            Center(
-              child: Image.asset(
-                'Images/review.png',
-                fit: BoxFit.cover,
-              ),
+            Image.asset(
+              'Images/review.png',
+              fit: BoxFit.cover,
+              height: double.infinity,
+              width: double.infinity,
+              alignment: Alignment.center,
             ),
-            Positioned(
-              bottom: 200,
-              left: 0,
-              right: 0,
-              child: Center(
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: EdgeInsets.all(16.0), // 적절한 패딩을 추가합니다.
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => MainPage()),
-
                     );
                   },
                   style: ButtonStyle(

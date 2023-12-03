@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'walkman.dart';
 
 void main() {
-  runApp(Chating());
+  runApp(MaterialApp(
+    home: Chating(),
+  ));
 }
 
 class Chating extends StatefulWidget {
@@ -103,6 +106,28 @@ class _ChatingScreenState extends State<Chating> {
     return Scaffold(
       appBar: AppBar(
         title: Text('김민수', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.of(context).pop(); // 현재 스택에서 이 페이지를 팝하여 이전 페이지로 돌아갑니다.
+          },
+        ),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Walkman()),
+              );
+            },
+            child: Text(
+              '배정하기',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
       ),
       body: Column(
         children: <Widget>[
@@ -148,7 +173,7 @@ class ChatMessage extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(right: 16.0),
               child: CircleAvatar(
-                backgroundImage: NetworkImage('https://placekitten.com/200/300'),
+                backgroundImage: AssetImage('Images/maindog1.png'),
               ),
             ),
           Expanded(

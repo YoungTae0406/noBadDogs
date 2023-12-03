@@ -77,13 +77,33 @@ class LoginPage extends StatelessWidget {
                 // 로그인 로직 구현
                 final email = emailController.text;
                 final password = passwordController.text;
+                if(email.isEmpty || password.isEmpty) {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: Text('오류'),
+                      content: Text('이메일과 비밀번호를 모두 입력해주세요.'),
+                      actions: <Widget>[
+                        TextButton(
+                          child: Text('닫기'),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                        ),
+                      ],
+                    ),
+                  );
+                  return;
+                }
                 try {
                   final user = await loginLogic.signIn(email, password);
+                  if (user != null) {
+                    Navigator.pushReplacement( // Navigator.push 대신에 pushReplacement를 사용합니다.
+                      context,
+                      MaterialPageRoute(builder: (context) => MainPage()),
+                    );
+                  }
                   print('User logged in: ${user?.user?.email ?? 'No email'}');
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => MainPage()),
-                  );
                   // 성공시 -> 메인페이지로 이동
                 } catch (e) {
                   print(e.toString());

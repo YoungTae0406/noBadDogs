@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'review.dart';
 import 'walkingStatus.dart';
 
+// 산책배정자가 보이는 페이지
 void main() {
   runApp(MyApp());
 }
