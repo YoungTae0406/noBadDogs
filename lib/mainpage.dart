@@ -11,6 +11,7 @@ class Dog {
   final String price;
   final String temperament;
   final String imageUrl;
+  final Widget Function(BuildContext) pageBuilder;
 
   Dog({
     required this.name,
@@ -20,13 +21,14 @@ class Dog {
     required this.price,
     required this.temperament,
     required this.imageUrl,
+    required this.pageBuilder,
   });
 }
 
 final List<Dog> dogs = [
-  Dog(name: '비나', age: '3세', gender: '남', distance: '2km', price: '1만원', temperament: '소형견, 물지않아요~', imageUrl: 'Images/maindog1.png'),
-  Dog(name: '호두', age: '6세', gender: '여', distance: '4km', price: '1만원', temperament: '소형견, 물지않아요~', imageUrl: 'Images/maindog2.png'),
-  Dog(name: '요미', age: '1세', gender: '여', distance: '3km', price: '1만원', temperament: '소형견, 물지않아요~', imageUrl: 'Images/maindog3.png'),
+  Dog(name: '비나', age: '3세', gender: '남', distance: '2km', price: '1만원', temperament: '소형견, 물지않아요~', imageUrl: 'Images/maindog1.png', pageBuilder: (context) => PostView()),
+  Dog(name: '호두', age: '6세', gender: '여', distance: '4km', price: '1만원', temperament: '소형견, 물지않아요~', imageUrl: 'Images/maindog2.png', pageBuilder: (context) => PostView()),
+  Dog(name: '요미', age: '1세', gender: '여', distance: '3km', price: '1만원', temperament: '소형견, 물지않아요~', imageUrl: 'Images/maindog3.png', pageBuilder: (context) => UI3_demo()),
 ];
 
 class TrianglePainter extends CustomPainter {
@@ -174,7 +176,7 @@ class MainPage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => UI3_demo()),
+                      MaterialPageRoute(builder: dog.pageBuilder),
                     );
                   },
                   child: Container(
